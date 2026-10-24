@@ -1,0 +1,6 @@
+{"jsonrpc":"2.0","id":71,"result":{"protocolVersion":"2025-11-25","capabilities":{},"serverInfo":{"name":"fixture","version":"1"}}}
+{"jsonrpc":"2.0","method":"notifications/tools/list_changed"}
+{"jsonrpc":"2.0","id":72,"result":{"tools":[]}}
+INFO cache warmed
+{"jsonrpc":"2.0","id":73,"result":{}}
+{"jsonrpc":"2.0","method":"notifications/resources/list_changed"}
