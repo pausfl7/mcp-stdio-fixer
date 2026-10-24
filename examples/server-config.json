@@ -1,0 +1,7 @@
+{
+  "command": "${MCP_SERVER_BIN}",
+  "args": [
+    "--stdio"
+  ],
+  "env": {}
+}

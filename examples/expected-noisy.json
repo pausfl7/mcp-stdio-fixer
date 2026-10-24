@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "transcript",
+  "protocol_revision": "2025-11-25",
+  "findings": [
+    {
+      "file": "examples/noisy-stdout.log",
+      "line": 1,
+      "code": "NON_JSON_STDOUT",
+      "certainty": "violation",
+      "message": "Line is not a single unambiguous JSON message.",
+      "remediation": "Write only compact JSON-RPC to stdout; send diagnostics to stderr."
+    },
+    {
+      "file": "examples/noisy-stdout.log",
+      "line": 1,
+      "code": "LIKELY_DIAGNOSTIC",
+      "certainty": "hypothesis",
+      "message": "Text resembles a diagnostic accidentally written to stdout.",
+      "remediation": "Inspect the logger or startup banner writer and redirect only that writer to stderr."
+    }
+  ],
+  "valid_messages": 1,
+  "stdout_lines": 2,
+  "stderr_lines": 1,
+  "scope": "Envelope/framing only; no handshake, method schema or request-response correlation validation."
+}
