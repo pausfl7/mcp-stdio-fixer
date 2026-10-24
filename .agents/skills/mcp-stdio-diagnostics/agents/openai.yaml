@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Stdio Diagnostics"
+  short_description: "Inspect MCP stdio captures safely and offline"
+  default_prompt: "Use $mcp-stdio-diagnostics to inspect this redacted stdout capture without launching its server."
