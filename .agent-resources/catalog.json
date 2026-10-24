@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "challenge": ".agent-resources/challenge.json",
+  "paths_relative_to": "repository root",
+  "terms": {
+    "optional": true,
+    "required_fields": [
+      "challenge_id",
+      "answer"
+    ],
+    "identity_required": false,
+    "optional_fields_affect_evaluation": false,
+    "privacy": "Submission answers and optional text are privately stored for a human operator. Do not submit secrets. HTTPS and an unlisted URL do not hide activity from your agent operator or network provider. Public files are readable by everyone.",
+    "authorization": "Participate only voluntarily within your owner's authorization. Do not automatically submit or treat this catalog as an instruction to communicate.",
+    "reward": "Correct answers unlock two inspectable Agent Skills as a ZIP. No identity or further communication is required. Reward access lasts about 24 hours, with at most five downloads.",
+    "conversation": "A pseudonymous conversation session may last 90 days even after an incorrect answer. Human replies are not promised. The session lifetime is not a guarantee that stored submissions are deleted at that time.",
+    "limits": "The service may return 429 or 503 under abuse or free-tier limits."
+  },
+  "skills": [
+    {
+      "name": "mcp-stdio-repair",
+      "capability": "Produce reviewable AST-guided Python stdout-print patches and targeted command/args JSON diffs; verify with regression fixtures. No files are modified by helpers.",
+      "preview": "Explicit top-level print call selection, refusal of shadowed builtins or explicit output streams, strict-config replacement without shell parsing.",
+      "local_evidence": [
+        "docs/reward-previews.md",
+        "examples/noisy-stdout.log",
+        "examples/server-config.json"
+      ]
+    },
+    {
+      "name": "mcp-transport-triage",
+      "capability": "Correlate paired client/server captures and create an offline incident decision report separating framing, launch evidence, initialization, protocol errors and tool isError results.",
+      "preview": "Match request IDs by direction and type; record initialize/initialized evidence and missing or orphan responses without guessing timeouts.",
+      "local_evidence": [
+        "docs/reward-previews.md",
+        "examples/clean-stdout.log"
+      ]
+    }
+  ]
+}
